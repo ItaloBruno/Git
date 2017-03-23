@@ -1,1 +1,1 @@
-oi
+Leia esse arquivo antes de começar o projeto
