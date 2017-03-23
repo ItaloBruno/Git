@@ -21,3 +21,13 @@ git commit -m "<mensagem que você quiser para identificar o commit>"
 
 git commit -a -m "<mensagem que você quiser para identificar o commit>"
 (pula o processo de addss e faz loo tudo )
+
+git diff
+git diff --staged
+git log
+git log -p
+git log -p -n (n é o número de commits que você quer ver)
+gitk (abre a interface gráfica do git e mostra visualmente os commits)
+
+Revertendo um commit:
+git log --pretty=oneline (mostra apenas o código e descrição do commit)
