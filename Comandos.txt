@@ -1,0 +1,23 @@
+configuração inicial:
+git config --global user.name "<nome de usuário>"
+git config --global user.email "<seu email>"
+
+navegação entre pastas:
+cd <nome da pasta ou caminho>
+cd .. (sai da pasta)
+
+clear (limpa a tela)
+
+inicialização de um repositório : git init
+
+git status
+
+git add . (adiciona tudo)
+git add *.<extensão> (adiciona tudo com essa extensão)
+git add readme.txt (adiciona só esse arquivo)
+
+
+git commit -m "<mensagem que você quiser para identificar o commit>"
+
+git commit -a -m "<mensagem que você quiser para identificar o commit>"
+(pula o processo de addss e faz loo tudo )
