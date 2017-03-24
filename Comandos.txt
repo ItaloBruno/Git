@@ -36,7 +36,7 @@ git log --pretty=oneline (mostra apenas o código e descrição do commit)
 git commit --amend -m "<MENSAGEM>"
 (adicionando alterações no último commmit que foi feito)
 
-removendo arquivo da stage area:
+removendo arquivo da staging area:
 git reset HEAD <arquivo>
 
 reveertendo um arquivo ao status do último commit:
