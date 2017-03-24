@@ -44,3 +44,6 @@ git checkout -- <arquivo>
 
 removendo um arquivo do commit:
 git rm <arquivo>
+
+Para enviar estas alterações ao seu repositório remoto:
+git push origin master
