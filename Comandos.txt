@@ -31,3 +31,16 @@ gitk (abre a interface gráfica do git e mostra visualmente os commits)
 
 Revertendo um commit:
 git log --pretty=oneline (mostra apenas o código e descrição do commit)
+
+
+git commit --amend -m "<MENSAGEM>"
+(adicionando alterações no último commmit que foi feito)
+
+removendo arquivo da stage area:
+git reset HEAD <arquivo>
+
+reveertendo um arquivo ao status do último commit:
+git checkout -- <arquivo>
+
+removendo um arquivo do commit:
+git rm <arquivo>
