@@ -60,3 +60,5 @@ git tag -a <nome que você quer dar> -m "<comentário>"
 
 Atriuindo uma tag a um commit antigo:
 git tag -a <nome da tag> <Chave completa ou parcial do commit> -m "<mensagem>"
+
+git show <nome da tag>
