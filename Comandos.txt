@@ -52,3 +52,11 @@ git rm <arquivo>
 Para enviar estas alterações ao seu repositório remoto:
 git push origin master
 
+mostra as tags que tem no sistema:
+git tag
+
+Cria uma tag o commit atual:
+git tag -a <nome que você quer dar> -m "<comentário>"
+
+Atriuindo uma tag a um commit antigo:
+git tag -a <nome da tag> <Chave completa ou parcial do commit> -m "<mensagem>"
