@@ -56,7 +56,17 @@ mostra as tags que tem no sistema:
 git tag
 
 Cria uma tag o commit atual:
-git tag -a <nome que você quer dar> -m "<comentário>"
+git tag -a <nome da tag> -m "<comentário>"
 
 Atriuindo uma tag a um commit antigo:
 git tag -a <nome da tag> <Chave completa ou parcial do commit> -m "<mensagem>"
+
+git show <tag>
+
+Volta ao estado daquela tag:
+git checkout <tag>
+
+Voltar a branch master:
+git checkout master
+
+
