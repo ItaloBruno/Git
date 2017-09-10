@@ -6,15 +6,23 @@ configuração inicial:
 git config --global user.name "<nome de usuário>"
 git config --global user.email "<seu email>"
 
+(lista todas as configurções do seu git)
+git config --list
+
+Editando o editor principal do git:
+git config --global core.editor comandodoseueditor
+(caso você não definir, ele usará o vim como padrão)
+
 navegação entre pastas:
 cd <nome da pasta ou caminho>
 cd .. (sai da pasta)
+mkdir nomeDaPasta (Cria uma pasta com esse nome)
 
 clear (limpa a tela)
 
-inicialização de um repositório : git init
+inicialização de um repositório: git init
 
-git status
+git status (Serve para reportar como está o seu repositório nesse momento)
 
 git add . (adiciona tudo)
 git add *.<extensão> (adiciona tudo com essa extensão)
@@ -24,27 +32,34 @@ git add readme.txt (adiciona só esse arquivo)
 git commit -m "<mensagem que você quiser para identificar o commit>"
 
 git commit -a -m "<mensagem que você quiser para identificar o commit>"
-(pula o processo de addss e faz loo tudo )
+(pula o processo de addss e faz logo tudo )
 
-git diff
+
+git diff (mostra as modificações feitas nos arquivos)
+git diff --name-only (diz apenas o nome do arquivo que foi modificado)
 git diff --staged
+git shortlog (mostra em ordem alfabética quais foram os autores, quantos commits fizeram e quais foram)
+git shortlog -sn (mostra apenas o nome da pessoa e quantos commits cada um fez)
+git log --graph (mostra em forma gráfica o que está acontecendo com as branches) 
 git log
+git log --decorate (mostra informações a mais)
+git log --author ="nomeDoUsuário"( mostra todos os commits feitos pelo usuário especificado)
 git log -p
 git log -p -n (n é o número de commits que você quer ver)
+git show numeroDaHashDoCommit (mostra todas as mudanças nesse commit)
 gitk (abre a interface gráfica do git e mostra visualmente os commits)
 
 Revertendo um commit:
 git log --pretty=oneline (mostra apenas o código e descrição do commit)
 
-
 git commit --amend -m "<MENSAGEM>"
 (adicionando alterações no último commmit que foi feito)
 
-removendo arquivo da staging area:
+removendo arquivo da stage area:
 git reset HEAD <arquivo>
 
 reveertendo um arquivo ao status do último commit:
-git checkout -- <arquivo>
+git checkout <nomeDoArquivo>
 
 removendo um arquivo do commit:
 git rm <arquivo>
@@ -52,10 +67,11 @@ git rm <arquivo>
 Para enviar estas alterações ao seu repositório remoto:
 git push origin master
 
+//-----------------------------------------------------------
 mostra as tags que tem no sistema:
 git tag
 
-Cria uma tag o commit atual:
+Cria uma tag ao commit atual:
 git tag -a <nome da tag> -m "<comentário>"
 
 Atriuindo uma tag a um commit antigo:
@@ -66,5 +82,34 @@ git show <tag>
 Volta ao estado daquela tag:
 git checkout <tag>
 
-Voltar a branch master:
-git checkout master
+//-----------------------------------------------------------
+Criando uma branch:
+git checkout -b <nomeDaBranch>
+
+Mostra as branches existentes e em qual você está no momento:
+git branch
+
+Para navegar entre branches: 
+git checkout <nomeDaBranch>
+
+Para deletar uma branch:
+git branch -D <nomeDoBranch>
+
+//-----------------------------------------------------------
+Unindo Branches:
+-Merge:
+git merge <nomeDaBranch>
+
+-Rebase:
+git rebase <nomeDaBranch>
+
+//-----------------------------------------------------------
+git reset --soft <hash do commit> (os arquivos modificados já estão na stage area, pronto para ser commitado)
+git reset --mixed <hash do commit> (os arquivos modificados estão fora da stage area)
+git reset --hard <hash do commit> (todas as modificações em qualquer um dos arquivo serão revertidos 
+				   e mata o commit posterior ao que você resetou)
+//-----------------------------------------------------------
+git stash
+git stash apply
+git stash list
+git stash clear
